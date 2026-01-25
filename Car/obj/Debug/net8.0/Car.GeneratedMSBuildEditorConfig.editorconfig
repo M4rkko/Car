@@ -18,20 +18,20 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\Markk\Desktop\car\Car
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Markk/Desktop/car/Car/Views/Car/CreateUpdate.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FyXENyZWF0ZVVwZGF0ZS5jc2h0bWw=
+[C:/Users/Markk/Desktop/car/Car/Views/Cars/CreateUpdate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2Fyc1xDcmVhdGVVcGRhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Markk/Desktop/car/Car/Views/Car/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FyXERlbGV0ZS5jc2h0bWw=
+[C:/Users/Markk/Desktop/car/Car/Views/Cars/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2Fyc1xEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Markk/Desktop/car/Car/Views/Car/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FyXERldGFpbHMuY3NodG1s
+[C:/Users/Markk/Desktop/car/Car/Views/Cars/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2Fyc1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Markk/Desktop/car/Car/Views/Car/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FyXEluZGV4LmNzaHRtbA==
+[C:/Users/Markk/Desktop/car/Car/Views/Cars/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2Fyc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Markk/Desktop/car/Car/Views/Home/Index.cshtml]

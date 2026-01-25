@@ -1,0 +1,35 @@
+﻿@model IEnumerable<Car.Models.Cars.CarsIndexViewModel>
+
+
+<h2>Cars</h2>
+
+<p>
+    <a asp-action="Create">Create new</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Model</th>
+            <th>Engine</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var car in Model)
+        {
+            <tr>
+                <td>@car.Name</td>
+                <td>@car.Model</td>
+                <td>@car.Engine</td>
+                <td>
+                    <a asp-action="Details" asp-route-id="@car.Id">Details</a> |
+                    <a asp-action="Update" asp-route-id="@car.Id">Edit</a> |
+                    <a asp-action="Delete" asp-route-id="@car.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+

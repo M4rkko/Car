@@ -10,3 +10,9 @@ C:\Users\Markk\Desktop\car\Car.ApplicationServices\obj\Debug\net8.0\Car.Applicat
 C:\Users\Markk\Desktop\car\Car.ApplicationServices\obj\Debug\net8.0\refint\Car.ApplicationServices.dll
 C:\Users\Markk\Desktop\car\Car.ApplicationServices\obj\Debug\net8.0\Car.ApplicationServices.pdb
 C:\Users\Markk\Desktop\car\Car.ApplicationServices\obj\Debug\net8.0\ref\Car.ApplicationServices.dll
+C:\Users\Markk\Desktop\car\Car.ApplicationServices\bin\Debug\net8.0\Car.Core.dll
+C:\Users\Markk\Desktop\car\Car.ApplicationServices\bin\Debug\net8.0\Car.Data.dll
+C:\Users\Markk\Desktop\car\Car.ApplicationServices\bin\Debug\net8.0\Car.Core.pdb
+C:\Users\Markk\Desktop\car\Car.ApplicationServices\bin\Debug\net8.0\Car.Data.pdb
+C:\Users\Markk\Desktop\car\Car.ApplicationServices\obj\Debug\net8.0\Car.ApplicationServices.csproj.AssemblyReference.cache
+C:\Users\Markk\Desktop\car\Car.ApplicationServices\obj\Debug\net8.0\Car.Appl.08A25792.Up2Date

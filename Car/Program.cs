@@ -1,3 +1,8 @@
+using Car.ApplicationServices.Services;
+using Car.Core.ServiceInterface;
+using Car.Data;
+using Microsoft.EntityFrameworkCore;
+
 namespace Car
 {
     public class Program
@@ -7,6 +12,11 @@ namespace Car
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
+            builder.Services.AddDbContext<CarDbContext>(options =>
+                options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+            builder.Services.AddScoped<ICarServices, CarServices>();
+
             builder.Services.AddControllersWithViews();
 
             var app = builder.Build();

@@ -6,4 +6,19 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.23">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.23" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Car.ApplicationServices\Car.ApplicationServices.csproj" />
+    <ProjectReference Include="..\Car.Core\Car.Core.csproj" />
+    <ProjectReference Include="..\Car.Data\Car.Data.csproj" />
+    <ProjectReference Include="..\CarTest\CarTest.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -1,0 +1,20 @@
+﻿@model Car.Models.Cars.CarsCreateUpdateViewModel
+
+<form asp-action="Create" method="post">
+    <div>
+        <label>Name</label>
+        <input asp-for="Name" />
+    </div>
+
+    <div>
+        <label>Model</label>
+        <input asp-for="Model" />
+    </div>
+
+    <div>
+        <label>Engine</label>
+        <input asp-for="Engine" />
+    </div>
+
+    <button type="submit">Save</button>
+</form>
