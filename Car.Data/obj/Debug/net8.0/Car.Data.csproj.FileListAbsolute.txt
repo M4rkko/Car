@@ -1,0 +1,12 @@
+C:\Users\Markk\Desktop\car\Car.Data\obj\Debug\net8.0\Car.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Markk\Desktop\car\Car.Data\obj\Debug\net8.0\Car.Data.AssemblyInfoInputs.cache
+C:\Users\Markk\Desktop\car\Car.Data\obj\Debug\net8.0\Car.Data.AssemblyInfo.cs
+C:\Users\Markk\Desktop\car\Car.Data\obj\Debug\net8.0\Car.Data.csproj.CoreCompileInputs.cache
+C:\Users\Markk\Desktop\car\Car.Data\obj\Debug\net8.0\Car.Data.sourcelink.json
+C:\Users\Markk\Desktop\car\Car.Data\bin\Debug\net8.0\Car.Data.deps.json
+C:\Users\Markk\Desktop\car\Car.Data\bin\Debug\net8.0\Car.Data.dll
+C:\Users\Markk\Desktop\car\Car.Data\bin\Debug\net8.0\Car.Data.pdb
+C:\Users\Markk\Desktop\car\Car.Data\obj\Debug\net8.0\Car.Data.dll
+C:\Users\Markk\Desktop\car\Car.Data\obj\Debug\net8.0\refint\Car.Data.dll
+C:\Users\Markk\Desktop\car\Car.Data\obj\Debug\net8.0\Car.Data.pdb
+C:\Users\Markk\Desktop\car\Car.Data\obj\Debug\net8.0\ref\Car.Data.dll

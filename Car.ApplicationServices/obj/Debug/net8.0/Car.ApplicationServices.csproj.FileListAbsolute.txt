@@ -1,0 +1,12 @@
+C:\Users\Markk\Desktop\car\Car.ApplicationServices\obj\Debug\net8.0\Car.ApplicationServices.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Markk\Desktop\car\Car.ApplicationServices\obj\Debug\net8.0\Car.ApplicationServices.AssemblyInfoInputs.cache
+C:\Users\Markk\Desktop\car\Car.ApplicationServices\obj\Debug\net8.0\Car.ApplicationServices.AssemblyInfo.cs
+C:\Users\Markk\Desktop\car\Car.ApplicationServices\obj\Debug\net8.0\Car.ApplicationServices.csproj.CoreCompileInputs.cache
+C:\Users\Markk\Desktop\car\Car.ApplicationServices\obj\Debug\net8.0\Car.ApplicationServices.sourcelink.json
+C:\Users\Markk\Desktop\car\Car.ApplicationServices\bin\Debug\net8.0\Car.ApplicationServices.deps.json
+C:\Users\Markk\Desktop\car\Car.ApplicationServices\bin\Debug\net8.0\Car.ApplicationServices.dll
+C:\Users\Markk\Desktop\car\Car.ApplicationServices\bin\Debug\net8.0\Car.ApplicationServices.pdb
+C:\Users\Markk\Desktop\car\Car.ApplicationServices\obj\Debug\net8.0\Car.ApplicationServices.dll
+C:\Users\Markk\Desktop\car\Car.ApplicationServices\obj\Debug\net8.0\refint\Car.ApplicationServices.dll
+C:\Users\Markk\Desktop\car\Car.ApplicationServices\obj\Debug\net8.0\Car.ApplicationServices.pdb
+C:\Users\Markk\Desktop\car\Car.ApplicationServices\obj\Debug\net8.0\ref\Car.ApplicationServices.dll
