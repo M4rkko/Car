@@ -22,6 +22,7 @@ namespace Car.Controllers
             var result = _context.Cars
                 .Select(x => new CarsIndexViewModel
                 {
+                    Id = x.Id ?? Guid.Empty,
                     Name = x.Name,
                     Model = x.Model,
                     Engine = x.Engine
@@ -40,21 +41,19 @@ namespace Car.Controllers
         [HttpPost]
         public async Task<IActionResult> Create(CarsCreateUpdateViewModel vm)
         {
+            if (!ModelState.IsValid)
+                return View("CreateUpdate", vm);
+
             var dto = new CarDto
             {
-                Id = vm.Id,
                 Name = vm.Name,
                 Model = vm.Model,
                 Engine = vm.Engine,
-                CreatedAt = vm.CreatedAt,
-                ModifiedAt = vm.ModifiedAt
+                CreatedAt = DateTime.Now,
+                ModifiedAt = DateTime.Now
             };
 
-            var result = await _carServices.Create(dto);
-
-            if (result == null)
-                return RedirectToAction(nameof(Index));
-
+            await _carServices.Create(dto);
             return RedirectToAction(nameof(Index));
         }
 
@@ -130,6 +129,7 @@ namespace Car.Controllers
 
             var vm = new CarsDeleteViewModel
             {
+                Id = car.Id ?? Guid.Empty,
                 Name = car.Name,
                 Model = car.Model,
                 Engine = car.Engine,

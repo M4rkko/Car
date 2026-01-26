@@ -1,5 +1,22 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+﻿@model Car.Models.Cars.CarsDetailsViewModel
+
+<h2>Car details</h2>
+
+<dl class="row">
+    <dt class="col-sm-2">Name</dt>
+    <dd class="col-sm-10">@Model.Name</dd>
+
+    <dt class="col-sm-2">Model</dt>
+    <dd class="col-sm-10">@Model.Model</dd>
+
+    <dt class="col-sm-2">Engine</dt>
+    <dd class="col-sm-10">@Model.Engine</dd>
+
+    <dt class="col-sm-2">Created</dt>
+    <dd class="col-sm-10">@Model.CreatedAt</dd>
+
+    <dt class="col-sm-2">Modified</dt>
+    <dd class="col-sm-10">@Model.ModifiedAt</dd>
+</dl>
+
+<a asp-action="Index">Back</a>

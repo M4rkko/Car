@@ -1,20 +1,32 @@
 ﻿@model Car.Models.Cars.CarsCreateUpdateViewModel
 
-<form asp-action="Create" method="post">
+<form asp-action="@(Model.Id == null ? "Create" : "Update")" method="post">
+    <input type="hidden" asp-for="Id" />
+    <div asp-validation-summary="All" class="text-danger"></div>
     <div>
-        <label>Name</label>
-        <input asp-for="Name" />
+        <label asp-for="Name"></label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
     </div>
 
-    <div>
-        <label>Model</label>
-        <input asp-for="Model" />
-    </div>
 
     <div>
-        <label>Engine</label>
-        <input asp-for="Engine" />
+        <label asp-for="Model"></label>
+        <input asp-for="Model" class="form-control" />
+        <span asp-validation-for="Model" class="text-danger"></span>
     </div>
 
-    <button type="submit">Save</button>
+
+    <div>
+        <label asp-for="Engine"></label>
+        <input asp-for="Engine" class="form-control" />
+        <span asp-validation-for="Engine" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class=btn btn-secondary 
+                          style="margin-top:5px; background-color: lightskyblue;">Save</button>
 </form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
