@@ -3,6 +3,7 @@ using Car.Core.Domain;
 using Car.Core.Dto;
 using Car.Core.ServiceInterface;
 using Car.Data;
+using Microsoft.EntityFrameworkCore.Migrations.Operations;
 
 namespace Car.ApplicationServices.Services
 {
@@ -23,6 +24,8 @@ namespace Car.ApplicationServices.Services
             car.Name = dto.Name;
             car.Model = dto.Model;
             car.Engine = dto.Engine;
+            car.Color = dto.Color;
+            car.TireCount = dto.TireCount ?? 0;
             car.CreatedAt = DateTime.Now;
             car.ModifiedAt = DateTime.Now;
 
@@ -48,6 +51,8 @@ namespace Car.ApplicationServices.Services
             domain.Name = dto.Name;
             domain.Model = dto.Model;
             domain.Engine = dto.Engine;
+            domain.Color = dto.Color;
+            domain.TireCount = dto.TireCount ?? 0;
 
             domain.CreatedAt = dto.CreatedAt;
             domain.ModifiedAt = DateTime.Now;

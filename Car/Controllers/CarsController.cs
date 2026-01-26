@@ -25,7 +25,9 @@ namespace Car.Controllers
                     Id = x.Id ?? Guid.Empty,
                     Name = x.Name,
                     Model = x.Model,
-                    Engine = x.Engine
+                    Engine = x.Engine,
+                    Color = x.Color,
+                    TireCount = x.TireCount
                 });
 
             return View(result);
@@ -49,6 +51,8 @@ namespace Car.Controllers
                 Name = vm.Name,
                 Model = vm.Model,
                 Engine = vm.Engine,
+                Color = vm.Color,
+                TireCount = vm.TireCount,
                 CreatedAt = DateTime.Now,
                 ModifiedAt = DateTime.Now
             };
@@ -70,6 +74,8 @@ namespace Car.Controllers
                 Name = car.Name,
                 Model = car.Model,
                 Engine = car.Engine,
+                Color = car.Color,
+                TireCount = car.TireCount,
                 CreatedAt = car.CreatedAt,
                 ModifiedAt = car.ModifiedAt
             };
@@ -91,6 +97,8 @@ namespace Car.Controllers
                 Name = car.Name,
                 Model = car.Model,
                 Engine = car.Engine,
+                Color = car.Color,
+                TireCount = car.TireCount,
                 CreatedAt = car.CreatedAt,
                 ModifiedAt = car.ModifiedAt
             };
@@ -101,21 +109,19 @@ namespace Car.Controllers
         [HttpPost]
         public async Task<IActionResult> Update(CarsCreateUpdateViewModel vm)
         {
+            if (!ModelState.IsValid)
+                return View("CreateUpdate", vm);
             var dto = new CarDto
             {
                 Id = vm.Id,
                 Name = vm.Name,
                 Model = vm.Model,
                 Engine = vm.Engine,
-                CreatedAt = vm.CreatedAt,
+                Color = vm.Color,
+                TireCount = vm.TireCount,
                 ModifiedAt = vm.ModifiedAt
             };
-
-            var result = await _carServices.Update(dto);
-
-            if (result == null)
-                return RedirectToAction(nameof(Index));
-
+            await _carServices.Update(dto);
             return RedirectToAction(nameof(Index));
         }
 
@@ -133,6 +139,8 @@ namespace Car.Controllers
                 Name = car.Name,
                 Model = car.Model,
                 Engine = car.Engine,
+                Color = car.Color,
+                TireCount = car.TireCount,
                 CreatedAt = car.CreatedAt,
                 ModifiedAt = car.ModifiedAt
             };

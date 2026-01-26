@@ -23,6 +23,19 @@
         <span asp-validation-for="Engine" class="text-danger"></span>
     </div>
 
+    <div>
+        <label asp-for="Color"></label>
+        <input asp-for="Color" class="form-control" />
+        <span asp-validation-for="Color" class="text-danger"></span>
+    </div>
+
+    <div>
+        <label asp-for="TireCount">Tire Count</label>
+        <input asp-for="TireCount" type="number" class="form-control" />
+        <span asp-validation-for="TireCount" class="text-danger"></span>
+    </div>
+
+
     <button type="submit" class=btn btn-secondary 
                           style="margin-top:5px; background-color: lightskyblue;">Save</button>
 </form>
