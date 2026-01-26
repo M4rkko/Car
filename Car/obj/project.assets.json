@@ -472,6 +472,22 @@
           "build/net8.0/Microsoft.EntityFrameworkCore.Design.props": {}
         }
       },
+      "Microsoft.EntityFrameworkCore.InMemory/8.0.23": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "8.0.23"
+        },
+        "compile": {
+          "lib/net8.0/Microsoft.EntityFrameworkCore.InMemory.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.EntityFrameworkCore.InMemory.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.EntityFrameworkCore.Relational/8.0.23": {
         "type": "package",
         "dependencies": {
@@ -3074,6 +3090,27 @@
           "bin/placeholder/Car.ApplicationServices.dll": {}
         }
       },
+      "Car.CarTest/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Car.ApplicationServices": "1.0.0",
+          "Car.Core": "1.0.0",
+          "Car.Data": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "8.0.23",
+          "Microsoft.EntityFrameworkCore.InMemory": "8.0.23",
+          "Microsoft.NET.Test.Sdk": "17.8.0",
+          "coverlet.collector": "6.0.0",
+          "xunit": "2.5.3",
+          "xunit.runner.visualstudio": "2.5.3"
+        },
+        "compile": {
+          "bin/placeholder/Car.CarTest.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Car.CarTest.dll": {}
+        }
+      },
       "Car.Core/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
@@ -3097,22 +3134,6 @@
         },
         "runtime": {
           "bin/placeholder/Car.Data.dll": {}
-        }
-      },
-      "CarTest/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v8.0",
-        "dependencies": {
-          "Microsoft.NET.Test.Sdk": "17.8.0",
-          "coverlet.collector": "6.0.0",
-          "xunit": "2.5.3",
-          "xunit.runner.visualstudio": "2.5.3"
-        },
-        "compile": {
-          "bin/placeholder/CarTest.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/CarTest.dll": {}
         }
       }
     }
@@ -3950,6 +3971,21 @@
         "lib/net8.0/Microsoft.EntityFrameworkCore.Design.xml",
         "microsoft.entityframeworkcore.design.8.0.23.nupkg.sha512",
         "microsoft.entityframeworkcore.design.nuspec"
+      ]
+    },
+    "Microsoft.EntityFrameworkCore.InMemory/8.0.23": {
+      "sha512": "sOcZYsy4QaBnmw+UX6Ar3PB8ldvAcIhCEhspgC+bJ4mVzTieZdgMQNzHmba0Rpg6YixHgbwpDH8ffyCA4jbLxA==",
+      "type": "package",
+      "path": "microsoft.entityframeworkcore.inmemory/8.0.23",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "PACKAGE.md",
+        "lib/net8.0/Microsoft.EntityFrameworkCore.InMemory.dll",
+        "lib/net8.0/Microsoft.EntityFrameworkCore.InMemory.xml",
+        "microsoft.entityframeworkcore.inmemory.8.0.23.nupkg.sha512",
+        "microsoft.entityframeworkcore.inmemory.nuspec"
       ]
     },
     "Microsoft.EntityFrameworkCore.Relational/8.0.23": {
@@ -9105,6 +9141,11 @@
       "path": "../Car.ApplicationServices/Car.ApplicationServices.csproj",
       "msbuildProject": "../Car.ApplicationServices/Car.ApplicationServices.csproj"
     },
+    "Car.CarTest/1.0.0": {
+      "type": "project",
+      "path": "../CarTest/Car.CarTest.csproj",
+      "msbuildProject": "../CarTest/Car.CarTest.csproj"
+    },
     "Car.Core/1.0.0": {
       "type": "project",
       "path": "../Car.Core/Car.Core.csproj",
@@ -9114,19 +9155,14 @@
       "type": "project",
       "path": "../Car.Data/Car.Data.csproj",
       "msbuildProject": "../Car.Data/Car.Data.csproj"
-    },
-    "CarTest/1.0.0": {
-      "type": "project",
-      "path": "../CarTest/CarTest.csproj",
-      "msbuildProject": "../CarTest/CarTest.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
       "Car.ApplicationServices >= 1.0.0",
+      "Car.CarTest >= 1.0.0",
       "Car.Core >= 1.0.0",
       "Car.Data >= 1.0.0",
-      "CarTest >= 1.0.0",
       "Microsoft.EntityFrameworkCore.Design >= 8.0.23",
       "Microsoft.EntityFrameworkCore.SqlServer >= 8.0.23"
     ]
@@ -9173,8 +9209,8 @@
             "C:\\Users\\Markk\\Desktop\\car\\Car.Data\\Car.Data.csproj": {
               "projectPath": "C:\\Users\\Markk\\Desktop\\car\\Car.Data\\Car.Data.csproj"
             },
-            "C:\\Users\\Markk\\Desktop\\car\\CarTest\\CarTest.csproj": {
-              "projectPath": "C:\\Users\\Markk\\Desktop\\car\\CarTest\\CarTest.csproj"
+            "C:\\Users\\Markk\\Desktop\\car\\CarTest\\Car.CarTest.csproj": {
+              "projectPath": "C:\\Users\\Markk\\Desktop\\car\\CarTest\\Car.CarTest.csproj"
             }
           }
         }

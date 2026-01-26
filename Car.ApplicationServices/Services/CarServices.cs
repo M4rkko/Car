@@ -45,22 +45,24 @@ namespace Car.ApplicationServices.Services
 
         public async Task<Car.Core.Domain.Car> Update(CarDto dto)
         {
-            Car.Core.Domain.Car domain = new();
+            var car = await _context.Cars.FirstOrDefaultAsync(x => x.Id == dto.Id);
 
-            domain.Id = dto.Id;
-            domain.Name = dto.Name;
-            domain.Model = dto.Model;
-            domain.Engine = dto.Engine;
-            domain.Color = dto.Color;
-            domain.TireCount = dto.TireCount ?? 0;
+            if (car == null)
+                return null;
 
-            domain.CreatedAt = dto.CreatedAt;
-            domain.ModifiedAt = DateTime.Now;
+            car.Id = dto.Id;
+            car.Name = dto.Name;
+            car.Model = dto.Model;
+            car.Engine = dto.Engine;
+            car.Color = dto.Color;
+            car.TireCount = dto.TireCount ?? 0;
 
-            _context.Cars.Update(domain);
+            car.CreatedAt = dto.CreatedAt;
+            car.ModifiedAt = DateTime.Now;
+
             await _context.SaveChangesAsync();
 
-            return domain;
+            return car;
         }
 
         public async Task<Car.Core.Domain.Car> Delete(Guid id)

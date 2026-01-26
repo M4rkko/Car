@@ -226,12 +226,12 @@
         }
       }
     },
-    "C:\\Users\\Markk\\Desktop\\car\\CarTest\\CarTest.csproj": {
+    "C:\\Users\\Markk\\Desktop\\car\\CarTest\\Car.CarTest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Markk\\Desktop\\car\\CarTest\\CarTest.csproj",
-        "projectName": "CarTest",
-        "projectPath": "C:\\Users\\Markk\\Desktop\\car\\CarTest\\CarTest.csproj",
+        "projectUniqueName": "C:\\Users\\Markk\\Desktop\\car\\CarTest\\Car.CarTest.csproj",
+        "projectName": "Car.CarTest",
+        "projectPath": "C:\\Users\\Markk\\Desktop\\car\\CarTest\\Car.CarTest.csproj",
         "packagesPath": "C:\\Users\\Markk\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Markk\\Desktop\\car\\CarTest\\obj\\",
         "projectStyle": "PackageReference",
@@ -254,7 +254,17 @@
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\Markk\\Desktop\\car\\Car.ApplicationServices\\Car.ApplicationServices.csproj": {
+                "projectPath": "C:\\Users\\Markk\\Desktop\\car\\Car.ApplicationServices\\Car.ApplicationServices.csproj"
+              },
+              "C:\\Users\\Markk\\Desktop\\car\\Car.Core\\Car.Core.csproj": {
+                "projectPath": "C:\\Users\\Markk\\Desktop\\car\\Car.Core\\Car.Core.csproj"
+              },
+              "C:\\Users\\Markk\\Desktop\\car\\Car.Data\\Car.Data.csproj": {
+                "projectPath": "C:\\Users\\Markk\\Desktop\\car\\Car.Data\\Car.Data.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -272,6 +282,14 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.23, )"
+            },
+            "Microsoft.EntityFrameworkCore.InMemory": {
+              "target": "Package",
+              "version": "[8.0.23, )"
+            },
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
               "version": "[17.8.0, )"
@@ -347,8 +365,8 @@
               "C:\\Users\\Markk\\Desktop\\car\\Car.Data\\Car.Data.csproj": {
                 "projectPath": "C:\\Users\\Markk\\Desktop\\car\\Car.Data\\Car.Data.csproj"
               },
-              "C:\\Users\\Markk\\Desktop\\car\\CarTest\\CarTest.csproj": {
-                "projectPath": "C:\\Users\\Markk\\Desktop\\car\\CarTest\\CarTest.csproj"
+              "C:\\Users\\Markk\\Desktop\\car\\CarTest\\Car.CarTest.csproj": {
+                "projectPath": "C:\\Users\\Markk\\Desktop\\car\\CarTest\\Car.CarTest.csproj"
               }
             }
           }
