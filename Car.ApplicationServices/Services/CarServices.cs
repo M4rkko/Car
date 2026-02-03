@@ -18,6 +18,21 @@ namespace Car.ApplicationServices.Services
 
         public async Task<Car.Core.Domain.Car> Create(CarDto dto)
         {
+            if (string.IsNullOrWhiteSpace(dto.Name))
+                throw new ArgumentException("Name is required", nameof(dto.Name));
+            
+            if (string.IsNullOrWhiteSpace(dto.Model))
+                throw new ArgumentException("Model is required", nameof(dto.Name));
+            
+            if (string.IsNullOrWhiteSpace(dto.Engine))
+                throw new ArgumentException("Engine is required", nameof(dto.Name));
+            
+            if (string.IsNullOrWhiteSpace(dto.Color))
+                throw new ArgumentException("Color is required", nameof(dto.Name));
+            
+            if (dto.TireCount == null || dto.TireCount <= 0)
+                throw new ArgumentException("TireCount must be > 0", nameof(dto.TireCount));
+
             Car.Core.Domain.Car car = new();
 
             car.Id = Guid.NewGuid();
@@ -49,6 +64,22 @@ namespace Car.ApplicationServices.Services
 
             if (car == null)
                 return null;
+
+            if (string.IsNullOrWhiteSpace(dto.Name))
+                throw new ArgumentException("Name is required", nameof(dto.Name));
+
+            if (string.IsNullOrWhiteSpace(dto.Model))
+                throw new ArgumentException("Model is required", nameof(dto.Name));
+            
+            if (string.IsNullOrWhiteSpace(dto.Engine))
+                throw new ArgumentException("Engine is required", nameof(dto.Name));
+            
+            if (string.IsNullOrWhiteSpace(dto.Color))
+                throw new ArgumentException("Color is required", nameof(dto.Name));
+            
+            if (dto.TireCount == null || dto.TireCount <= 0)
+                throw new ArgumentException("TireCount must be > 0", nameof(dto.TireCount));
+
 
             car.Id = dto.Id;
             car.Name = dto.Name;

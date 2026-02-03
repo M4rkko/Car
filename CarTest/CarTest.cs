@@ -10,7 +10,7 @@ namespace CarTest
 {
     public class CarTests
     {
-        // #1 Testing if Create creates new car
+        // Testing if Create creates new car
         [Fact]
         public async Task Create_ShouldCreateCar()
         {
@@ -41,7 +41,47 @@ namespace CarTest
             Assert.NotEqual(Guid.Empty, result.Id.Value);
         }
 
-        // #2 Testing If details returns correct details
+        // Create Negative test
+        [Fact]
+        public async Task Create_EmptyName_ShouldFail()
+        {
+            // Arrange
+            var context = TestDbFactory.Create();
+            var service = new CarServices(context);
+
+            var dto = new CarDto
+            {
+                Name = "",
+                Model = "M5",
+                Engine = "V8",
+                Color = "Black",
+                TireCount = 4
+            };
+
+            // Act + Assert
+            await Assert.ThrowsAsync<ArgumentException>(() => service.Create(dto));
+        }
+
+        // Create Negaive test #2
+        [Fact]
+        public async Task Create_NegativeTireCount_ShouldThrow()
+        {
+            var context = TestDbFactory.Create();
+            var service = new CarServices(context);
+
+            var dto = new CarDto
+            {
+                Name = "BMW",
+                Model = "M5",
+                Engine = "V8",
+                Color = "Black",
+                TireCount = -1
+            };
+
+            await Assert.ThrowsAsync<ArgumentException>(() => service.Create(dto));
+        }
+
+        // Testing If details returns correct details
         [Fact]
         public async Task DetailAsync_ShouldReturnCar()
         {
@@ -63,7 +103,7 @@ namespace CarTest
             Assert.Equal("Audi", result.Name);
         }
 
-        // #3 Testing if Updating Modifies correctly
+        // Testing if Updating Modifies correctly
         [Fact]
         public async Task Update_ShouldModifyCar()
         {
@@ -101,8 +141,41 @@ namespace CarTest
             Assert.True(updated.ModifiedAt > oldModified);
         }
 
+        // Update negative test 2 in 1
+        [Fact]
+        public async Task Update_NegativeTireCount_ShouldThrow()
+        {
 
-        // #4 Testing if Delete Removes the car
+            var context = TestDbFactory.Create();
+            var service = new CarServices(context);
+
+            var car = await service.Create(new CarDto
+            {
+                Name = "Toyota",
+                Model = "Corolla",
+                Engine = "Hybrid",
+                Color = "White",
+                TireCount = 4
+            });
+
+            var oldModified = car.ModifiedAt;
+            await Task.Delay(5);
+
+            var dto = new CarDto
+            {
+                Id = car.Id,
+                CreatedAt = car.CreatedAt,
+                Name = "",
+                Model = "Coro",
+                Engine = "",
+                Color = "White",
+                TireCount = -1
+            };
+
+            await Assert.ThrowsAsync<ArgumentException>(() => service.Update(dto));
+        }
+
+        // Testing if Delete Removes the car
         [Fact]
         public async Task Delete_ShouldRemoveCar()
         {
@@ -125,7 +198,7 @@ namespace CarTest
             Assert.Null(result);
         }
 
-        // #5 Testing Id
+        // Testing Id
         [Fact]
         public async Task DetailAsync_UnknownId_ReturnsNull()
         {
@@ -136,6 +209,5 @@ namespace CarTest
 
             Assert.Null(result);
         }
-
     }
 }

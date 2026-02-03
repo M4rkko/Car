@@ -9,9 +9,9 @@
       "Car/1.0.0": {
         "dependencies": {
           "Car.ApplicationServices": "1.0.0",
+          "Car.CarTest": "1.0.0",
           "Car.Core": "1.0.0",
           "Car.Data": "1.0.0",
-          "CarTest": "1.0.0",
           "Microsoft.EntityFrameworkCore.Design": "8.0.23",
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.23"
         },
@@ -395,6 +395,17 @@
         },
         "runtime": {
           "lib/net8.0/Microsoft.EntityFrameworkCore.Design.dll": {
+            "assemblyVersion": "8.0.23.0",
+            "fileVersion": "8.0.2325.60904"
+          }
+        }
+      },
+      "Microsoft.EntityFrameworkCore.InMemory/8.0.23": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "8.0.23"
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.EntityFrameworkCore.InMemory.dll": {
             "assemblyVersion": "8.0.23.0",
             "fileVersion": "8.0.2325.60904"
           }
@@ -1867,6 +1878,25 @@
           }
         }
       },
+      "Car.CarTest/1.0.0": {
+        "dependencies": {
+          "Car.ApplicationServices": "1.0.0",
+          "Car.Core": "1.0.0",
+          "Car.Data": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "8.0.23",
+          "Microsoft.EntityFrameworkCore.InMemory": "8.0.23",
+          "Microsoft.NET.Test.Sdk": "17.8.0",
+          "coverlet.collector": "6.0.0",
+          "xunit": "2.5.3",
+          "xunit.runner.visualstudio": "2.5.3"
+        },
+        "runtime": {
+          "Car.CarTest.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
       "Car.Core/1.0.0": {
         "runtime": {
           "Car.Core.dll": {
@@ -1883,20 +1913,6 @@
         },
         "runtime": {
           "Car.Data.dll": {
-            "assemblyVersion": "1.0.0",
-            "fileVersion": "1.0.0.0"
-          }
-        }
-      },
-      "CarTest/1.0.0": {
-        "dependencies": {
-          "Microsoft.NET.Test.Sdk": "17.8.0",
-          "coverlet.collector": "6.0.0",
-          "xunit": "2.5.3",
-          "xunit.runner.visualstudio": "2.5.3"
-        },
-        "runtime": {
-          "CarTest.dll": {
             "assemblyVersion": "1.0.0",
             "fileVersion": "1.0.0.0"
           }
@@ -2035,6 +2051,13 @@
       "sha512": "sha512-Kx8uA4WOHjNjgri0++YdQ3twhS/tootOa9BL36vRDcT1G2n7TDUadoSi9gMz5AcHS3klyCMzVMel9JI/GhVEQg==",
       "path": "microsoft.entityframeworkcore.design/8.0.23",
       "hashPath": "microsoft.entityframeworkcore.design.8.0.23.nupkg.sha512"
+    },
+    "Microsoft.EntityFrameworkCore.InMemory/8.0.23": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-sOcZYsy4QaBnmw+UX6Ar3PB8ldvAcIhCEhspgC+bJ4mVzTieZdgMQNzHmba0Rpg6YixHgbwpDH8ffyCA4jbLxA==",
+      "path": "microsoft.entityframeworkcore.inmemory/8.0.23",
+      "hashPath": "microsoft.entityframeworkcore.inmemory.8.0.23.nupkg.sha512"
     },
     "Microsoft.EntityFrameworkCore.Relational/8.0.23": {
       "type": "package",
@@ -3007,17 +3030,17 @@
       "serviceable": false,
       "sha512": ""
     },
+    "Car.CarTest/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "Car.Core/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
     "Car.Data/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "CarTest/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
