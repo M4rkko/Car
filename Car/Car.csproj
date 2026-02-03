@@ -18,7 +18,6 @@
     <ProjectReference Include="..\Car.ApplicationServices\Car.ApplicationServices.csproj" />
     <ProjectReference Include="..\Car.Core\Car.Core.csproj" />
     <ProjectReference Include="..\Car.Data\Car.Data.csproj" />
-    <ProjectReference Include="..\CarTest\Car.CarTest.csproj" />
   </ItemGroup>
 
 </Project>
